@@ -1,0 +1,2 @@
+D:\DirectX11-Graphics\Projects\DIrectX11 Tutorial\Debug\DIrectX11 Tutorial.exe
+D:\DirectX11-Graphics\Projects\DIrectX11 Tutorial\Debug\DIrectX11 Tutorial.pdb

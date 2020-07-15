@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{a165b641-6321-4bd5-a923-40d5d07cbc1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{9430a669-de60-49b2-9abd-16c98a94abd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render">
+      <UniqueIdentifier>{f757b8b2-2840-41c8-bc83-8f4b77a98693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\Shaders">
+      <UniqueIdentifier>{7ebecbb8-aa29-4c2e-a466-64d53825424e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\Shaders\Pixel">
+      <UniqueIdentifier>{ce373bec-5ad7-413d-ab7b-3a7c589b11e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\Shaders\Vertex">
+      <UniqueIdentifier>{791b9614-cfcb-4a86-b824-d221be6cbe42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\Shaders\Hull">
+      <UniqueIdentifier>{69bffadc-d7ee-4318-bba2-920dc92b0469}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\Shaders\Domain">
+      <UniqueIdentifier>{e9685c98-a647-4e7c-aade-db71f7529000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\Shaders\Geometry">
+      <UniqueIdentifier>{d34b2ff1-f4fa-4913-b635-00c3a60a4c1f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\RenderManager.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\ObjectManager.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\RenderManager.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
