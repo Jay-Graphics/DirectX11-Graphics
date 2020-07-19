@@ -40,6 +40,15 @@
     <Filter Include="Render\Shaders\Geometry">
       <UniqueIdentifier>{d34b2ff1-f4fa-4913-b635-00c3a60a4c1f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Objects\Example">
+      <UniqueIdentifier>{f22965be-5544-4e66-9041-516086580916}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Mesh">
+      <UniqueIdentifier>{6ccd72df-46fb-4a91-8207-9db568e32bb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Globals">
+      <UniqueIdentifier>{ddeb79c8-db63-4b5d-8ad6-a598375d9efd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -51,16 +60,46 @@
     <ClCompile Include="Objects\ObjectManager.cpp">
       <Filter>Objects</Filter>
     </ClCompile>
+    <ClCompile Include="Manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Example\Cube.cpp">
+      <Filter>Objects\Example</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Mesh\Mesh.cpp">
+      <Filter>Objects\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Object.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Headers.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjectManager.h">
-      <Filter>Objects</Filter>
-    </ClInclude>
     <ClInclude Include="Render\RenderManager.h">
       <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Object.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\ObjectManager.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Example\Cube.h">
+      <Filter>Objects\Example</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Mesh\Mesh.h">
+      <Filter>Objects\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers.h">
+      <Filter>Globals</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals\Structs.h">
+      <Filter>Globals</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals\Defines.h">
+      <Filter>Globals</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

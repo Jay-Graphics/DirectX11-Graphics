@@ -1,7 +1,6 @@
 // HelloWindowsDesktop.cpp
 // compile with: /D_UNICODE /DUNICODE /DWIN32 /D_WINDOWS /c
-#include "Render\RenderManager.h"
-#include "Objects\ObjectManager.h"
+#include "Manager.h"
 
 // Global variables
 
@@ -11,11 +10,8 @@ static TCHAR szWindowClass[] = _T("DesktopApp");
 // The string that appears in the application's title bar.
 static TCHAR szTitle[] = _T("DirectX11 Tutorial");
 
-// Manager for all rendering
-static RenderManager* render = new RenderManager();
-
-// Manager for all Objects
-static ObjectManager* object = new ObjectManager();
+// Manager for Project
+Manager* manager = new Manager();
 
 
 HINSTANCE hInst;
@@ -30,6 +26,10 @@ int CALLBACK WinMain(
     _In_ int       nCmdShow
 )
 {
+    Window_Information dx11Win;
+    dx11Win.Width = 1080;
+    dx11Win.Height = 720;
+    dx11Win.hinst = hInstance;
 
 #pragma region Create and Show Window
     WNDCLASSEX wcex;
@@ -75,7 +75,7 @@ int CALLBACK WinMain(
         szTitle,
         WS_OVERLAPPEDWINDOW,
         CW_USEDEFAULT, CW_USEDEFAULT,
-        1080, 1080,
+        dx11Win.Width, dx11Win.Height,
         NULL,
         NULL,
         hInstance,
@@ -99,18 +99,28 @@ int CALLBACK WinMain(
         nCmdShow);
     UpdateWindow(hWnd);
 
+    dx11Win.hwnd = hWnd;
 #pragma endregion
 
-    // Main message loop:
-    MSG msg;
-    while (GetMessage(&msg, NULL, 0, 0))
+#pragma region Create and DX11 Window
+
+
+    if (FAIL(manager->CreateDX11Window(dx11Win)))
     {
-        TranslateMessage(&msg);
-        DispatchMessage(&msg);
-        object->Update();
-        render->Update();
-        render->Draw();
+        PostQuitMessage(0);
     }
+
+#pragma endregion
+
+        // Main message loop:
+        MSG msg;
+        while (GetMessage(&msg, NULL, 0, 0))
+        {
+            TranslateMessage(&msg);
+            DispatchMessage(&msg);
+            manager->Update();
+            manager->Render();
+        }
 
     return (int)msg.wParam;
 }

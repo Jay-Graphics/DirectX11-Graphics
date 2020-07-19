@@ -141,12 +141,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="Objects\Example\Cube.cpp" />
+    <ClCompile Include="Objects\Mesh\Mesh.cpp" />
+    <ClCompile Include="Objects\Object.cpp" />
     <ClCompile Include="Objects\ObjectManager.cpp" />
     <ClCompile Include="Render\RenderManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Globals\Defines.h" />
+    <ClInclude Include="Globals\Structs.h" />
     <ClInclude Include="Headers.h" />
-    <ClInclude Include="ObjectManager.h" />
+    <ClInclude Include="Manager.h" />
+    <ClInclude Include="Objects\Example\Cube.h" />
+    <ClInclude Include="Objects\Mesh\Mesh.h" />
+    <ClInclude Include="Objects\Object.h" />
+    <ClInclude Include="Objects\ObjectManager.h" />
     <ClInclude Include="Render\RenderManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

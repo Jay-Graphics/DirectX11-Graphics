@@ -1,2 +1,3 @@
-﻿  main.cpp
+﻿  RenderManager.cpp
+D:\DirectX11-Graphics\Projects\DIrectX11 Tutorial\Globals\Defines.h(6,22): warning C4369: 'Return::SUCCESS':  enumerator value '4294967295' cannot be represented as 'int', value is '-1'
   DIrectX11 Tutorial.vcxproj -> D:\DirectX11-Graphics\Projects\DIrectX11 Tutorial\Debug\DIrectX11 Tutorial.exe
